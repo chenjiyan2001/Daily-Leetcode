@@ -17,12 +17,15 @@ class Solution(object):
             comb.extend(new_comb)
         return comb
 
-    # 3. O(n^2) t:48ms m:18.4M(27.46) array 尾插
-    def grayCode(self, n: int) -> List[int]:
-        comb = [0b0]
-        for i in range(n):
-            comb = [c << 1 for c in comb]
-            comb.extend([c + 1 for c in comb[::-1]])
-        return comb
+    # # 3. O(2^n) t:48ms m:18.4M(27.46) array 尾插
+    # def grayCode(self, n: int) -> List[int]:
+    #     comb = [0b0]
+    #     for i in range(n):
+    #         comb = [c << 1 for c in comb]
+    #         comb.extend([c + 1 for c in comb[::-1]])
+    #     return comb
 
-    
+    # # 4. O(2^n) t:44ms(71%) m:18.4M(28%) 异或
+    # def grayCode(self, n: int) -> List[int]:
+    #     result = [(i>>1)^i for i in range(2**n)]
+    #     return result
