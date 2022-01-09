@@ -1,5 +1,5 @@
 class Solution:
-    # 1. O(log|x|) t:36ms(54%) m:14.9M(54%) array
+    # 1. t:36ms(54%) m:14.9M(54%) array
     # def reverse(self, x: int) -> int:
     #     border = 2**31
     #     x = str(x)[::-1]
